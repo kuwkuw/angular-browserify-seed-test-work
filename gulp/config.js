@@ -11,7 +11,7 @@ global.config = {
             images: SRC_FOLDER + '/assets/images/**/*',
             scripts: SRC_FOLDER + '/modules/**/*.js',
             bowerStyles: ['bower_components/**/*.min.css', "bower_components/material-date-picker/app/styles/mbdatepicker.css"],
-            styles: SRC_FOLDER + '/styles/app.scss',
+            styles: SRC_FOLDER + '/styles/app.scss',         
             stylesGlob: SRC_FOLDER + '/styles/**/*.scss',
             templates: SRC_FOLDER + '/modules/**/*.html',
             templatesHTML: SRC_FOLDER + '/modules/**/*.html',

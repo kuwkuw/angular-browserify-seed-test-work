@@ -1,12 +1,13 @@
 'use strict';
 
 var gulp = require('gulp');
+var util = require("gulp-util")
 var gulpif = require('gulp-if');
 var rename = require('gulp-rename');
 var csso = require('gulp-csso');
 var autoprefixer = require('gulp-autoprefixer');
-var sass = require('gulp-ruby-sass');
-
+//var sass = require('gulp-ruby-sass');
+var sass = require('gulp-sass');
 var sassOptions = {
     style: 'compressed',
     'sourcemap=none': true
@@ -19,7 +20,8 @@ function handleError(err) {
 
 module.exports = gulp.task('styles', function () {
     return gulp.src(config.paths.src.styles)
-        .pipe(sass(sassOptions).on('error', handleError))
+        // .pipe(sass(sassOptions).on('error', handleError))
+        .pipe(sass().on('error', handleError))
         .pipe(autoprefixer('last 1 version'))
         .pipe(gulpif(release, csso()))
         .pipe(gulpif(release, rename(config.filenames.release.styles), rename(config.filenames.build.styles)))

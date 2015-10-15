@@ -1,0 +1,13 @@
+<md-content class="photos-wrapper" infinite-scroll="viewCntr.addMoreItems()" infinite-scroll-distance="1">
+	<div >
+		<md-card class="thumbnail-pic-holder" ng-repeat="item in viewCntr.photos">
+				<a href="#/photo/{{item.id}}"><img ng-src="{{item.thumbnailUrl}}" class="md-card-image" alt="{{item.title}}"></a>
+			<md-card-content>
+				<p>
+					{{item.title}}
+				</p>
+				<md-button ng-href="#/album/{{item.albumId}}">Go to Album</md-button>	
+			</md-card-content>			
+		</md-card>
+	</div>
+</md-content>

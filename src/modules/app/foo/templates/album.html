@@ -1,0 +1,12 @@
+<div>
+	<h3>{{albumCntr.albumTitle}}</h3>
+	<md-content class="photos-wrapper">	
+		<md-card class="thumbnail-pic-holder" ng-repeat="item in albumCntr.album">
+				<a href="#/photo/{{item.id}}"><img ng-src="{{item.thumbnailUrl}}" class="md-card-image" alt="{{item.title}}"></a>
+			<md-card-content>
+				<p>{{item.title}}</p>					
+			</md-card-content>	
+				
+		</md-card>
+	</md-content>
+</div>
